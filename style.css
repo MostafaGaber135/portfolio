@@ -1,0 +1,312 @@
+/* Reset & Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #121212;
+    /* Dark background color */
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+header {
+    background-color: #1f1f1f;
+    /* Darker header background */
+    color: #e0e0e0;
+    /* Light text color */
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    /* Light text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    font-weight: 500;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    background: #e0e0e0;
+    /* Light underline color */
+    transition: width 0.3s ease, background-color 0.3s ease;
+    width: 0;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #333, #555);
+    /* Dark gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #e0e0e0;
+    /* Light text color */
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #e0e0e0;
+    /* Light button background */
+    text-decoration: none;
+    color: #121212;
+    /* Dark button text */
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #333;
+    /* Dark button background on hover */
+    color: #e0e0e0;
+    /* Light button text on hover */
+    transform: scale(1.05);
+}
+
+h2, p{
+    margin: 10px;
+}
+
+.section {
+    padding: 4rem 0;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-photo {
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    /* Darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.project-card {
+    background: #1e1e1e;
+    /* Dark background color */
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+    /* Dark border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    /* Darker shadow */
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #e0e0e0;
+    /* Light text color */
+    background-color: #333;
+    /* Dark button background */
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #555;
+    /* Slightly lighter button background on hover */
+    color: #e0e0e0;
+    /* Light button text on hover */
+    transform: scale(1.05);
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap onto multiple lines if necessary */
+    gap: 1rem;
+    /* Space between skill cards */
+    justify-content: center;
+    /* Centers the skill cards horizontally */
+    padding: 1rem;
+}
+
+.skill-card {
+    background-color: #1e1e1e;
+    /* Dark background color */
+    color: #e0e0e0;
+    /* Light text color */
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #333;
+    /* Dark border color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    /* Darker shadow */
+    text-align: center;
+    font-size: 1.2rem;
+    flex: 1 1 150px;
+    /* Allows cards to grow and shrink, minimum width of 150px */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    background-color: #333;
+    /* Slightly lighter background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+    /* Darker shadow on hover */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+form input,
+form textarea {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    /* Dark border color */
+    border-radius: 5px;
+    background: #1e1e1e;
+    /* Dark background color */
+    color: #e0e0e0;
+    /* Light text color */
+}
+
+form button {
+    background-color: #e0e0e0;
+    /* Light button background */
+    color: #121212;
+    /* Dark button text */
+    padding: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #333;
+    /* Dark button background on hover */
+    color: #e0e0e0;
+    /* Light button text on hover */
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #1f1f1f;
+    /* Darker footer background */
+    color: #e0e0e0;
+    /* Light text color */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
